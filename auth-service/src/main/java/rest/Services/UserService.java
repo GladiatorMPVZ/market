@@ -1,4 +1,4 @@
-package shopcore.services;
+package rest.Services;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -8,9 +8,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import shopcore.entity.Role;
-import shopcore.entity.User;
-import shopcore.repository.UserRepository;
+import rest.Entities.Role;
+import rest.Entities.User;
+import rest.Repository.UserRepository;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -34,6 +34,6 @@ public class UserService implements UserDetailsService {
     }
 
     private Collection<? extends GrantedAuthority> mapRolesToAuthorities(Collection<Role> roles) {
-        return roles.stream().map(role -> new SimpleGrantedAuthority(role.getTitle())).collect(Collectors.toList());
+        return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
     }
 }

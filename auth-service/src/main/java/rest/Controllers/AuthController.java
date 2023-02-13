@@ -1,4 +1,4 @@
-package shopcore.controller;
+package rest.Controllers;
 
 import api.JwtRequest;
 import api.JwtResponse;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-import shopcore.utils.JwtService;
+import rest.Services.JwtService;
 
 import java.security.Principal;
 

@@ -1,4 +1,4 @@
-package shopcore;
+package rest;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.BadCredentialsException;

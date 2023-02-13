@@ -1,4 +1,4 @@
-package shopcore.configs;
+package rest.Configs;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +16,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import rest.Services.JwtRequestFilter;
 
 @EnableWebSecurity
 @RequiredArgsConstructor

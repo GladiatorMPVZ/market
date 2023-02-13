@@ -1,4 +1,4 @@
-package shopcore.entity;
+package rest.Entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -13,6 +13,6 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "title")
-    private String title;
+    @Column(name = "name")
+    private String name;
 }
