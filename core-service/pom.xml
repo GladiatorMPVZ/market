@@ -79,6 +79,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>rest.rest2</groupId>
             <artifactId>api</artifactId>
             <version>0.0.1-SNAPSHOT</version>

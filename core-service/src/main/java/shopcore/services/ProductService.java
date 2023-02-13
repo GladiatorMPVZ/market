@@ -1,5 +1,6 @@
 package shopcore.services;
 
+import api.ProductDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import shopcore.entity.Product;
@@ -26,5 +27,13 @@ public class ProductService {
 
     public void deleteProductById(Long id) {
         productRepository.deleteById(id);
+    }
+
+    public Product create(ProductDto productDto) {
+        Product product = new Product();
+        product.setPrice(productDto.getPrice());
+        product.setTitle(productDto.getTitle());
+        productRepository.save(product);
+        return product;
     }
 }
