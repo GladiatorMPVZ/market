@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -30,4 +31,7 @@ public class Order {
 
     @Column(name = "phone")
     private String phone;
+
+    @Column(name = "total_price")
+    private BigDecimal totalPrice;
 }

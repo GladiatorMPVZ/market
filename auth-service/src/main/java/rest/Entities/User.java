@@ -1,4 +1,4 @@
-package shopcore.entity;
+package rest.Entities;
 
 import jakarta.persistence.*;
 import lombok.Data;

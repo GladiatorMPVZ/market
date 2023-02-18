@@ -11,6 +11,7 @@ import java.util.Optional;
 public class CartServiceIntegration {
     private final RestTemplate restTemplate;
 
+
     public Optional<CartDto> getCart() {
         return Optional.ofNullable(restTemplate.getForObject("http://localhost:8289/api/v1/cart/", CartDto.class));
     }
