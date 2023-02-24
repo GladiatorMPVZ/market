@@ -13,8 +13,8 @@ public class CartConvertor {
     private final CartItemConvertor cartItemConvertor;
 
     public CartDto entityToDto(Cart cart) {
-        CartDto cartDto = new CartDto();
-        cartDto.setItems(cart.getItems().stream().map(cartItemConvertor::entityToDto).collect(Collectors.toList()));
-        return cartDto;
+        return CartDto.newBuilder()
+                .withItems(cart.getItems().stream().map(cartItemConvertor::entityToDto).collect(Collectors.toList()))
+                .build();
     }
 }
