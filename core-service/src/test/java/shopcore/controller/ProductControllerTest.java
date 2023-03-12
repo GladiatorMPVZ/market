@@ -26,8 +26,11 @@ class ProductControllerTest {
     @Test
     void getProductById() {
         Product product = productService.create(
-                new ProductDto(1L, "title", new BigDecimal("100"))
-        );
+                ProductDto.newBuilder()
+                        .withId(1L)
+                        .withTitle("title")
+                        .withPrice(new BigDecimal("100"))
+                        .build());
         productRepository.save(product);
 
         Product productByHttp = webTestClient.get()
